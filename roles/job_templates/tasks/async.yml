@@ -22,7 +22,7 @@
         name: __error_data
 
     - name: "Building list of not processed templates"
-      ansible.builtin.set_fact:
+      ansible.builtin.set_fact: # noqa jinja[spacing]
         __templates_error_list: "{{ __templates_error_list | default([]) + [ {
                                                                           'name': __error_data['invocation']['module_args']['name'],
                                                                           'project_name': __error_data['invocation']['module_args']['project'],
